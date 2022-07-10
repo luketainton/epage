@@ -24,7 +24,7 @@
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
           <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <img src="{{ url_for('static', filename='msg.png') }}" class="bi me-2" height="32"/>
+            <img alt="ePage logo" src="{{ url_for('static', filename='msg.png') }}" class="bi me-2" height="32"/>
             <span class="fs-4">ePage</span>
           </a>
         </header>
@@ -63,6 +63,7 @@
           </div>
         </div>
         <br>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
       <button class="btn btn-primary" type="submit">Submit</button>
     </form>
     

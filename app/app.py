@@ -3,10 +3,12 @@
 """Flask web server."""
 
 from flask import Flask, render_template, request
+from flask_wtf.csrf import CSRFProtect
 from app.send_page import send_page
 
 
 app = Flask(__name__)
+csrf = CSRFProtect(app)
 
 @app.route("/", methods=['GET'])
 def index():
