@@ -1,7 +1,10 @@
 #!/usr/local/bin/python3
 
+from app.app import app
+
+
 def main():
-    # Commands here
+    app.run()
     
 
 if __name__ == "__main__":
