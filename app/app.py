@@ -1,5 +1,7 @@
 #!/usr/local/bin/python3
 
+"""Flask web server."""
+
 from flask import Flask, render_template, request
 from app.send_page import send_page
 
@@ -8,10 +10,12 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET'])
 def index():
+    """Returns index template."""
     return render_template('index.html', status='')
 
 @app.route("/", methods=['POST'])
 def send():
+    """POST function"""
     result = send_page(
         name=request.form.get('name'),
         email=request.form.get('email'),

@@ -1,10 +1,13 @@
 #!/usr/local/bin/python3
 
+"""Send messages via the Pushover API."""
+
 import os
 import requests
 
 
 def send_page(name: str, email: str, message: str) -> tuple:
+    """POST to the Pushover API."""
     api_url = "https://api.pushover.net/1/messages.json"
     api_token = os.getenv('PUSHOVER_API_TOKEN')
     user_key = os.getenv('PUSHOVER_USER_KEY')
