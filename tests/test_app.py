@@ -3,7 +3,7 @@
 """Tests for app/app.py"""
 
 
-from tests import client
+from tests import client  # pragma: no cover
 
 
 def test_index(client) -> None:

@@ -13,5 +13,5 @@ def client():
     """Set up Flask client for use in tests."""
     app.secret_key = os.urandom(12).hex()
     csrf.init_app(app)
-    client = app.test_client()
-    yield client
+    web_client = app.test_client()
+    yield web_client
