@@ -33,6 +33,7 @@ jobs:
         run: |
           coverage run -m pytest -v --junitxml=testresults.xml
           coverage xml
+          sed -i 's/\/home\/runner\/work\/epage\/epage\//\/github\/workspace\//g' coverage.xml
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
