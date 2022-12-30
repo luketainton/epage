@@ -26,7 +26,8 @@ def send_page(name: str, email: str, message: str) -> tuple:
     req = requests.post(
         api_url,
         json=payload,
-        headers={'Content-Type': 'application/json'}
+        headers={'Content-Type': 'application/json'},
+        timeout=5
     )
 
     if req.status_code == 200 and req.json().get('status') == 1:
