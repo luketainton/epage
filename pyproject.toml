@@ -1,0 +1,47 @@
+[project]
+name = "epage"
+version = "1.0.0"
+description = "Send messages via Pushover."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flask>=3.1.0",
+    "flask-wtf>=1.2.2",
+    "requests>=2.32.3",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "black<25.2.0,>=25.1.0",
+    "coverage<8.0.0,>=7.6.10",
+    "isort<6.1.0,>=6.0.0",
+    "pylint<4.0.0,>=3.3.3",
+    "pylint-exit<2.0.0,>=1.2.0",
+    "pytest<9.0.0,>=8.3.4",
+    "ruff>=0.11.2",
+]
+
+[tool.pdm.build]
+includes = []
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.ruff]
+fix = true
+indent-width = 4
+line-length = 101
+output-format = "pylint"
+required-version = ">=0.9.6"
+respect-gitignore = true
+show-fixes = true
+src = ["app", "tests"]
+unsafe-fixes = false
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 90
+indent-style = "space"
+quote-style = "double"
+skip-magic-trailing-comma = true
