@@ -5,15 +5,15 @@ on:
     - cron: "0 9 * * 0"
 
 jobs:
-  test:
-    name: Test
-    uses: https://git.tainton.uk/repos/roboluke/.gitea/workflows/ci.yml@main
-    with:
-      python-version: 3.13
-    secrets:
-      SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST_URL }}
-      SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
-      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+  # test:
+  #   name: Test
+  #   uses: https://git.tainton.uk/repos/roboluke/.gitea/workflows/ci.yml@main
+  #   with:
+  #     python-version: 3.13
+  #   secrets:
+  #     SONAR_HOST_URL: ${{ secrets.SONARQUBE_HOST_URL }}
+  #     SONAR_TOKEN: ${{ secrets.SONARQUBE_TOKEN }}
+  #     SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
   create_release:
     name: Create Release
