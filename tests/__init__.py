@@ -3,6 +3,7 @@
 """PyTest unit tests."""
 
 import os
+
 import pytest
 
 from app.app import app, csrf
