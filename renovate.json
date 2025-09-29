@@ -3,7 +3,7 @@
   "assigneesFromCodeOwners": true,
   "dependencyDashboardAutoclose": true,
   "extends": ["config:recommended"],
-  "ignorePaths": ["**/.archive/**"],
+  "ignorePaths": ["**/.archive/**", "**/.ARCHIVE/**"],
   "labels": ["type/dependencies"],
   "platformCommit": "enabled",
   "rebaseWhen": "behind-base-branch",
@@ -16,5 +16,5 @@
   },
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
 }
